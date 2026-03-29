@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+
+// 整理出的三個精簡副標題
+const subtitles = [
+  "從實作中發現潛能，在體驗中預見未來",
+  "落實職探教育向下延伸，協助學子探索性向、擇其所適",
+  "開啟職涯的第一扇窗：實境教學 × 多元體驗 × 專業試探",
+];
 
 const Banner = () => {
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
-
-  // 整理出的三個精簡副標題
-  const subtitles = [
-    "從實作中發現潛能，在體驗中預見未來",
-    "落實職探教育向下延伸，協助學子探索性向、擇其所適",
-    "開啟職涯的第一扇窗：實境教學 × 多元體驗 × 專業試探"
-  ];
 
   // 自動輪播邏輯
   useEffect(() => {
@@ -26,22 +26,25 @@ const Banner = () => {
   return (
     <div
       className="position-relative w-100 overflow-hidden bg-dark d-flex align-items-center px-5 text-white"
-      style={{ height: '400px' }}
+      style={{ height: "400px" }}
     >
       {/* 背景圖層（可換成您的校舍背景圖並加上深色遮罩） */}
       <div
         className="position-absolute top-0 start-0 w-100 h-100"
         style={{
           // backgroundImage: "url('/path-to-your-school-image.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           opacity: 0.4,
           zIndex: 0,
         }}
       />
 
       {/* 文字內容區 */}
-      <div className="position-relative" style={{ zIndex: 1, maxWidth: '48rem' }}>
+      <div
+        className="position-relative"
+        style={{ zIndex: 1, maxWidth: "48rem" }}
+      >
         {/* 主標題 */}
         <h1 className="display-5 fw-bold mb-4 lh-sm">
           西螺國中 <br />
@@ -49,13 +52,16 @@ const Banner = () => {
         </h1>
 
         {/* 自動輪換副標題區 */}
-        <div className="d-flex align-items-center" style={{ minHeight: '2.5rem' }}>
+        <div
+          className="d-flex align-items-center"
+          style={{ minHeight: "2.5rem" }}
+        >
           <p
             className="fs-5 fw-light text-light border-start border-primary border-3 ps-3 fst-italic mb-0"
             style={{
-              transition: 'opacity 0.4s ease, transform 0.4s ease',
+              transition: "opacity 0.4s ease, transform 0.4s ease",
               opacity: visible ? 1 : 0,
-              transform: visible ? 'translateY(0)' : 'translateY(-8px)',
+              transform: visible ? "translateY(0)" : "translateY(-8px)",
             }}
           >
             {subtitles[index]}

@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+// 整理出的三個精簡副標題
+const subtitles = [
+  "從實作中發現潛能，在體驗中預見未來",
+  "落實職探教育向下延伸，協助學子探索性向、擇其所適",
+  "開啟職涯的第一扇窗：實境教學 × 多元體驗 × 專業試探",
+];
 
 const Banner = () => {
   const [index, setIndex] = useState(0);
-
-  // 整理出的三個精簡副標題
-  const subtitles = [
-    "從實作中發現潛能，在體驗中預見未來",
-    "落實職探教育向下延伸，協助學子探索性向、擇其所適",
-    "開啟職涯的第一扇窗：實境教學 × 多元體驗 × 專業試探"
-  ];
 
   // 自動輪播邏輯
   useEffect(() => {
@@ -22,7 +22,7 @@ const Banner = () => {
   return (
     <div className="relative w-full h-[400px] overflow-hidden bg-slate-900 flex items-center px-12 text-white">
       {/* 背景圖層（可換成您的校舍背景圖並加上深色遮罩） */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-40 bg-cover bg-center"
         style={{ backgroundImage: "url('/path-to-your-school-image.jpg')" }}
       />
@@ -62,7 +62,7 @@ const Banner = () => {
 
       {/* 右側裝飾性元素（可放置您圖片右側的圓圈圖示） */}
       <div className="hidden lg:block absolute right-20 opacity-60 pointer-events-none">
-          {/* 這裡可放置右側的 SVG 圓圈結構 */}
+        {/* 這裡可放置右側的 SVG 圓圈結構 */}
       </div>
     </div>
   );
