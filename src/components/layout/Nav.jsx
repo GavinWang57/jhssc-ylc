@@ -12,7 +12,7 @@ function Nav() {
         {/* Logo 區 */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src="/logo.png"
+            src="images/logo.png"
             alt="雲林縣生涯及技藝教育資源網"
             height="50"
             className="me-2"

@@ -19,7 +19,7 @@ function Footer() {
           {/* Logo 與機關資訊 */}
           <div className="col-lg-4 mb-1 d">
             <img
-              src="/logoYunLin.png"
+              src="images/logoYunLin.png"
               alt="雲林縣政府"
               height="60"
               className="mb-3"
