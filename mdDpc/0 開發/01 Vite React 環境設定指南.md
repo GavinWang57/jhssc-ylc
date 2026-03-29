@@ -42,9 +42,27 @@ export default defineConfig({
   plugins: [react()],
   // 設定 GitHub Pages 部署的 base 路徑
   // 開發環境使用 '/'，生產環境使用 repository 名稱
-  base: process.env.NODE_ENV === "production" ? "/react-gh-pages-sample/" : "/",
+  base: process.env.NODE_ENV === "production" ? "//jhssc-ylc/" : "/",
 });
 ```
+
+### 設定 package.json 部署腳本
+
+在 `package.json` 的 `scripts` 區塊中加入 `deploy` 指令：
+
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  }
+}
+```
+
+- **`npm run build`**：先建置生產版本，輸出至 `dist/` 資料夾
+- **`gh-pages -d dist`**：將 `dist/` 資料夾內容推送至 GitHub Pages
 
 ---
 
