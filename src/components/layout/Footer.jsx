@@ -2,14 +2,26 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   const externalLinks = [
-    { name: "生涯發展教育", url: "https://career.moe.edu.tw/" },
-    { name: "國中技藝教育", url: "https://www.k12ea.gov.tw/" },
-    { name: "技職大玩JOB", url: "https://job.tvbs.com.tw/" },
-    { name: "國中畢業生適性入學宣導網站", url: "https://adapt.k12ea.gov.tw/" },
-    { name: "技專校院招生策略委員會", url: "https://www.techadmi.edu.tw/" },
+    {
+      name: "生涯發展教育",
+      url: "https://cirn.moe.edu.tw/Module/index.aspx?sid=1182",
+    },
+    {
+      name: "國中技藝教育",
+      url: "https://cirn.moe.edu.tw/WebContent/index.aspx?sid=1204&mid=13918",
+    },
+    { name: "技職大玩JOB", url: "https://www.twmakers.com.tw/" },
+    {
+      name: "國中畢業生適性入學宣導網站",
+      url: "https://shs.k12ea.gov.tw/site/adapt-k12ea",
+    },
+    {
+      name: "技專校院招生策略委員會",
+      url: "https://www.techadmi.edu.tw/manual.php",
+    },
     { name: "技專校院招生委員會聯合會", url: "https://www.jctv.ntut.edu.tw/" },
     { name: "雲林縣政府", url: "https://www.yunlin.gov.tw/" },
-    { name: "雲林縣政府教育處", url: "https://www.boe.ylc.edu.tw/" },
+    { name: "雲林縣政府教育處", url: "https://education.ylc.edu.tw/News.aspx?n=1334" },
   ];
 
   return (
